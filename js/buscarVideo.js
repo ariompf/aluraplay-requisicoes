@@ -18,6 +18,10 @@ async function buscaVideo(evento) {
         elemento.descricao, 
         elemento.url, 
         elemento.imagem)));
+
+    if (busca.legth == 0) {
+        lista.innerHTML = `<h2 class='mensagem__titulo'>Não existem vídeos com esse termo</h2>`
+    }
 }
 
 const botaoDePesquisa =document.querySelector('[data-botao-pesquisa]');
